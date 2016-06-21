@@ -35,12 +35,12 @@ public class FileController {
 	}
 	
 	/**
-	 * Funcion que añade el texto de un fichero de entrada a la variable estatica finalText
+	 * Funcion que aniade el texto de un fichero de entrada a la variable estatica finalText
 	 * @param input Fichero de entrada
 	 */
 	public void addText(File input){
 		String text = "";
-		//Se recorre el fichero input y se va añadiendo el contenido a la variable text
+		//Se recorre el fichero input y se va aniadiendo el contenido a la variable text
 		try {
 			scanner = new Scanner(input);
 			while (scanner.hasNext()){
@@ -55,7 +55,7 @@ public class FileController {
 	}
 	
 	/**
-	 * Funcion que añade al archivo que se le pasa por parametro el contenido de la variable estatica finalText
+	 * Funcion que aniade al archivo que se le pasa por parametro el contenido de la variable estatica finalText
 	 * @param output Archivo en el cual se escribira el contenido de finalText
 	 */
 	public void add(File output){

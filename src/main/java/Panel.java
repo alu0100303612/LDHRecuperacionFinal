@@ -77,8 +77,8 @@ public class Panel extends JPanel{
 				JOptionPane.showMessageDialog(null, "Escoja un archivo", "ERROR", JOptionPane.ERROR_MESSAGE);
 			}else{
 				String fileName = filesCB.getSelectedItem().toString();//Recoge el nombre del fichero
-				File file = new File("inputFiles/" + fileName);//Añade la ruta
-				fileController.addText(file);//Llamada a la funcion que añade el texto del fichero a la variable
+				File file = new File("inputFiles/" + fileName);//Aniade la ruta
+				fileController.addText(file);//Llamada a la funcion que aniade el texto del fichero a la variable
 			}
 		}
 		
