@@ -18,7 +18,7 @@ public class FileController {
 	private Scanner scanner;//Objeto de la clase Scanner. Utilizado para leer ficheros
 	
 	/**
-	 * Función que borra el contenido del fichero que se le pasa por parámetro
+	 * Funcion que borra el contenido del fichero que se le pasa por parametro
 	 * @param file Fichero al cual se le borra el contenido
 	 */
 	public void deleteFile(File file){
@@ -35,7 +35,7 @@ public class FileController {
 	}
 	
 	/**
-	 * Función que añade el texto de un fichero de entrada a la variable estática finalText
+	 * Funcion que añade el texto de un fichero de entrada a la variable estatica finalText
 	 * @param input Fichero de entrada
 	 */
 	public void addText(File input){
@@ -55,8 +55,8 @@ public class FileController {
 	}
 	
 	/**
-	 * Función que añade al archivo que se le pasa por parámetro el contenido de la variable estática finalText
-	 * @param output Archivo en el cual se escribirá el contenido de finalText
+	 * Funcion que añade al archivo que se le pasa por parametro el contenido de la variable estatica finalText
+	 * @param output Archivo en el cual se escribira el contenido de finalText
 	 */
 	public void add(File output){
 		try {
@@ -79,12 +79,12 @@ public class FileController {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Error en operación de E/S", "ERROR", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Error en operacion de E/S", "ERROR", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
 	/**
-	 * Función que devuelve en un String el contenido de un fichero de texto
+	 * Funcion que devuelve en un String el contenido de un fichero de texto
 	 * @param input
 	 * @return
 	 */

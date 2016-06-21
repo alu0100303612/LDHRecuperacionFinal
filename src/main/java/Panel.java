@@ -8,13 +8,13 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
- * Clase que recoge el contenido que mostrará la ventana y las funcionalidades de este
+ * Clase que recoge el contenido que mostrara la ventana y las funcionalidades de este
  * @author Bianney
  *
  */
 public class Panel extends JPanel{
 	private static final long serialVersionUID = 1L;
-	//Variables estáticas que establecen los textos de los botones del panel
+	//Variables estaticas que establecen los textos de los botones del panel
 	static final String loadFile = "Cargar";
 	static final String go = "Tokenizar";
 	static final String delete = "Borrar fichero";
@@ -25,7 +25,7 @@ public class Panel extends JPanel{
 	
 	private JComboBox<String> filesCB = new JComboBox<String>(files);//ComboBox del panel
 	
-	//Declaración de los botones
+	//Declaracion de los botones
 	public JButton loadButton = new JButton(loadFile);
 	public JButton goButton = new JButton(go);
 	public JButton deleteButton = new JButton(delete);
@@ -68,8 +68,8 @@ public class Panel extends JPanel{
 	private class NewAction implements ActionListener{
 		
 		/**
-		 * Función con la cual se carga el contenido de los archivos de entrada seleccionados en una variable. 
-		 * Se ejecuta al pulsar el botón "Cargar"
+		 * Funcion con la cual se carga el contenido de los archivos de entrada seleccionados en una variable. 
+		 * Se ejecuta al pulsar el boton "Cargar"
 		 */
 		public void loadFile(){
 			boolean emptyComboBox = CheckEmpty.check(filesCB);//Comprueba si se ha seleccionado algÃºn fichero
@@ -78,13 +78,13 @@ public class Panel extends JPanel{
 			}else{
 				String fileName = filesCB.getSelectedItem().toString();//Recoge el nombre del fichero
 				File file = new File("inputFiles/" + fileName);//Añade la ruta
-				fileController.addText(file);//Llamada a la función que añade el texto del fichero a la variable
+				fileController.addText(file);//Llamada a la funcion que añade el texto del fichero a la variable
 			}
 		}
 		
 		/**
-		 * Función que pone en marcha el proceso de "tokenización". Llama a la función add(File) de FileController 
-		 * y a la función estática tokenizer(File, File) de TokenizerMain. Se ejecuta al pulsar el botón "Tokenizar"
+		 * Funcion que pone en marcha el proceso de "tokenizacion". Llama a la funcion add(File) de FileController 
+		 * y a la funcion estatica tokenizer(File, File) de TokenizerMain. Se ejecuta al pulsar el boton "Tokenizar"
 		 */
 		public void go(){
 			fileController.add(input);
@@ -92,7 +92,7 @@ public class Panel extends JPanel{
 		}
 		
 		/**
-		 * Función que borra el contenido de la variable estática finalText, y de los ficheros input y output.
+		 * Funcion que borra el contenido de la variable estatica finalText, y de los ficheros input y output.
 		 */
 		public void delete(){
 			FileController.finalText = "";
@@ -101,7 +101,7 @@ public class Panel extends JPanel{
 		}
 		
 		/**
-		 * Función que gestiona el funcionamiento de los botones
+		 * Funcion que gestiona el funcionamiento de los botones
 		 */
 		public void actionPerformed(ActionEvent event){
 			String nameEvent = event.getActionCommand(); 
@@ -116,7 +116,7 @@ public class Panel extends JPanel{
 		        	delete();
 		        break;
 		        default :
-		        	System.out.println("NewAction.ActionEvent. No entró en ningún lado");
+		        	System.out.println("NewAction.ActionEvent. No entro en ningun lado");
 		        break;
 		    }	
 		}		

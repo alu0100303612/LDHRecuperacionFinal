@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * Clase que contiene la ventana de la interfaz gráfica del programa
+ * Clase que contiene la ventana de la interfaz grafica del programa
  * @author Bianney
  *
  */
@@ -13,9 +13,9 @@ public class Frame extends JFrame{
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Constructor de la clase. Establece las características de la ventana.
+	 * Constructor de la clase. Establece las caracteristicas de la ventana.
 	 * @param panel Panel que recoge el contenido de la ventana
-	 * @param title Título que se mostrará en la ventana
+	 * @param title Titulo que se mostrara en la ventana
 	 */
 	public Frame(JPanel panel, String title){
 		setTitle (title);

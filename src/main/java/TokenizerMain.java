@@ -13,16 +13,16 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.InvalidFormatException; 
 
 /**
- * Clase que contiene el código "tokenizador"
+ * Clase que contiene el codigo "tokenizador"
  * @author Bianney
  *
  */
 public class TokenizerMain {
 	
 	/**
-	 * Función que ejecuta el tokenizador
-	 * @param input Archivo de entrada con la unión del texto de los distintos ficheros de entrada.
-	 * @param output Archivo de salida, contendrá el texto separado en tokens.
+	 * Funcion que ejecuta el tokenizador
+	 * @param input Archivo de entrada con la union del texto de los distintos ficheros de entrada.
+	 * @param output Archivo de salida, contendra el texto separado en tokens.
 	 */
 	public static void tokenizer(File input, File output) {
 		try {
@@ -53,11 +53,11 @@ public class TokenizerMain {
 		} catch (InvalidFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Formato inválido", "ERROR", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Formato invalido", "ERROR", JOptionPane.ERROR_MESSAGE);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Error en operación de E/S", "ERROR", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Error en operacion de E/S", "ERROR", JOptionPane.ERROR_MESSAGE);
 		}
 	} 
 }

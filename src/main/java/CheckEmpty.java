@@ -7,9 +7,9 @@ import javax.swing.JComboBox;
 public class CheckEmpty {
 	
 	/**
-	 * Método que comprueba si un JComboBox tiene seleccionado algún elemento
+	 * Metodo que comprueba si un JComboBox tiene seleccionado algun elemento
 	 * @param input JComboBox a comprobar
-	 * @return Booleano que representa si el comboBox está o no vacío
+	 * @return Booleano que representa si el comboBox esta o no vacío
 	 */
 	public static boolean check (JComboBox<String> input){
 		if (input.getSelectedIndex() < 0){
