@@ -3,7 +3,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
@@ -12,9 +14,8 @@ import javax.swing.JOptionPane;
  * @author Bianney
  *
  */
-public class FileController {
-	
-	public static String finalText = "";//String que almacena el texto de los distintos archivos de entrada
+public class FileController{
+	public String finalText = "";//String que almacena el texto de los distintos archivos de entrada
 	private Scanner scanner;//Objeto de la clase Scanner. Utilizado para leer ficheros
 	
 	/**
@@ -23,14 +24,14 @@ public class FileController {
 	 */
 	public void deleteFile(File file){
 		PrintWriter writer;
+		Logger logger = null;
 		try {
 			writer = new PrintWriter(file);
 			writer.print("");
 			writer.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Fichero no encontrado", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		}
 	}
 	
@@ -47,9 +48,8 @@ public class FileController {
 				text = text + scanner.next() + " ";
 			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Fichero no encontrado", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		}
 		finalText = finalText + text;
 	}
@@ -73,19 +73,17 @@ public class FileController {
 			}	
 			writer.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Fichero no encontrado", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Error en operacion de E/S", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		}
 	}
 	
 	/**
 	 * Funcion que devuelve en un String el contenido de un fichero de texto
-	 * @param input
+	 * @param input 
 	 * @return
 	 */
 	public String fileToString (File input){
@@ -98,10 +96,17 @@ public class FileController {
 			}
 			scanner.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Fichero no encontrado", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		}
 		return text;
+	}
+	
+	/**
+	 * Funcion que establece el valor de la variable finalText
+	 * @param input Valor que tomara finalText
+	 */
+	public void setFinalText(String input){
+		finalText = input;
 	}
 }

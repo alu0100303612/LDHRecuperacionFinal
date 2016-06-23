@@ -1,6 +1,8 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.Serializable;
+
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -12,7 +14,7 @@ import javax.swing.JPanel;
  * @author Bianney
  *
  */
-public class Panel extends JPanel{
+public class Panel extends JPanel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	//Variables estaticas que establecen los textos de los botones del panel
 	static final String loadFile = "Cargar";
@@ -30,7 +32,8 @@ public class Panel extends JPanel{
 	public JButton goButton = new JButton(go);
 	public JButton deleteButton = new JButton(delete);
 	
-	FileController fileController = new FileController();
+	FileController fileController;
+	
 	File input = new File("files/input.txt");//Fichero de entrada
 	File output = new File("files/output.txt");//Fichero de salida
 	
@@ -95,7 +98,7 @@ public class Panel extends JPanel{
 		 * Funcion que borra el contenido de la variable estatica finalText, y de los ficheros input y output.
 		 */
 		public void delete(){
-			FileController.finalText = "";
+			fileController.setFinalText("");
 			fileController.deleteFile(input);
 			fileController.deleteFile(output);
 		}

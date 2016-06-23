@@ -48,16 +48,16 @@ public class TokenizerMain {
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Fichero no encontrado", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		} catch (InvalidFormatException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Formato invalido", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Error en operacion de E/S", "ERROR", JOptionPane.ERROR_MESSAGE);
+			throw new RuntimeException(e);
 		}
 	} 
 }
