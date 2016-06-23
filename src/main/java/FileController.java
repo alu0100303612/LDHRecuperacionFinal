@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  *
  */
 public class FileController{
-	public String finalText = "";//String que almacena el texto de los distintos archivos de entrada
+	private String finalText = "";//String que almacena el texto de los distintos archivos de entrada
 	private Scanner scanner;//Objeto de la clase Scanner. Utilizado para leer ficheros
 	
 	/**
@@ -24,7 +24,6 @@ public class FileController{
 	 */
 	public void deleteFile(File file){
 		PrintWriter writer;
-		Logger logger = null;
 		try {
 			writer = new PrintWriter(file);
 			writer.print("");
@@ -88,7 +87,6 @@ public class FileController{
 	 */
 	public String fileToString (File input){
 		String text = "";
-		Scanner scanner;
 		try {
 			scanner = new Scanner(input);
 			while (scanner.hasNext()){

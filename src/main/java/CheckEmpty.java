@@ -7,6 +7,11 @@ import javax.swing.JComboBox;
 public class CheckEmpty {
 	
 	/**
+	 * Construtor privado vacio
+	 */
+	private CheckEmpty(){}
+	
+	/**
 	 * Metodo que comprueba si un JComboBox tiene seleccionado algun elemento
 	 * @param input JComboBox a comprobar
 	 * @return Booleano que representa si el comboBox esta o no vacio

@@ -20,6 +20,11 @@ import opennlp.tools.util.InvalidFormatException;
 public class TokenizerMain {
 	
 	/**
+	 * Constructor privado
+	 */
+	private TokenizerMain() {}
+	
+	/**
 	 * Funcion que ejecuta el tokenizador
 	 * @param input Archivo de entrada con la union del texto de los distintos ficheros de entrada.
 	 * @param output Archivo de salida, contendra el texto separado en tokens.

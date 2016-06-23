@@ -33,6 +33,6 @@ public class LoadFilesTest extends TestCase {
 	 * Test que comprueba que un objeto de la clase LoadFiles se ha creado correctamente
 	 */
 	public void testCreateObject(){
-		assertNotNull("El objeto se creo correctamente", new LoadFiles());
+		assertNotNull("El objeto se creo correctamente", LoadFiles.load());
 	}	
 }

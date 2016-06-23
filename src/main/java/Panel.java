@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.Serializable;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -28,11 +29,11 @@ public class Panel extends JPanel implements Serializable{
 	private JComboBox<String> filesCB = new JComboBox<String>(files);//ComboBox del panel
 	
 	//Declaracion de los botones
-	public JButton loadButton = new JButton(loadFile);
-	public JButton goButton = new JButton(go);
-	public JButton deleteButton = new JButton(delete);
+	private JButton loadButton = new JButton(loadFile);
+	private JButton goButton = new JButton(go);
+	private JButton deleteButton = new JButton(delete);
 	
-	FileController fileController;
+	FileController fileController = new FileController();
 	
 	File input = new File("files/input.txt");//Fichero de entrada
 	File output = new File("files/output.txt");//Fichero de salida
@@ -70,6 +71,8 @@ public class Panel extends JPanel implements Serializable{
 	 */
 	private class NewAction implements ActionListener{
 		
+		private Logger logger = null;
+
 		/**
 		 * Funcion con la cual se carga el contenido de los archivos de entrada seleccionados en una variable. 
 		 * Se ejecuta al pulsar el boton "Cargar"
@@ -106,6 +109,7 @@ public class Panel extends JPanel implements Serializable{
 		/**
 		 * Funcion que gestiona el funcionamiento de los botones
 		 */
+		@Override
 		public void actionPerformed(ActionEvent event){
 			String nameEvent = event.getActionCommand(); 
 			switch (nameEvent) {
@@ -119,7 +123,7 @@ public class Panel extends JPanel implements Serializable{
 		        	delete();
 		        break;
 		        default :
-		        	System.out.println("NewAction.ActionEvent. No entro en ningun lado");
+		        	logger.log(null, "No entro en ningun lado");
 		        break;
 		    }	
 		}		

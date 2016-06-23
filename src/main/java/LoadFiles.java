@@ -8,6 +8,11 @@ import java.io.File;
 public class LoadFiles {
 
 	/**
+	 * Constructor privado vacio
+	 */
+	private LoadFiles(){}
+	
+	/**
 	 * Funcion que devuelve un array con los nombres de los ficheros contenidos en el directorio 
 	 * inputFiles
 	 * @return Array con los nombres de los ficheros .txt
