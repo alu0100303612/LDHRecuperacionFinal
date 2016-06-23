@@ -12,7 +12,7 @@ import junit.framework.TestCase;
 public class LoadFilesTest extends TestCase {
 
 	/**
-	 * Test que comprueba el buen funcionamiento de la función load()
+	 * Test que comprueba el buen funcionamiento de la funcion load()
 	 */
 	public void testLoadFiles(){
 		//Array con los nombres esperados de los ficheros
@@ -21,7 +21,7 @@ public class LoadFilesTest extends TestCase {
 		filesNameExpected[1] = "file2.txt";
 		filesNameExpected[2] = "file3.txt";
 		filesNameExpected[3] = "file4.txt";
-		//Array con los nombres obtenidos con la función load()
+		//Array con los nombres obtenidos con la funcion load()
 		String[] filesName = LoadFiles.load();
 		Assert.assertArrayEquals(filesNameExpected, filesName);	
 	}

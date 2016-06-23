@@ -11,7 +11,7 @@ import org.junit.Test;
 public class FileControllerTest {
 
 	/**
-	 * Test que comprueba que la función fileToString(File) devuelve el valor 
+	 * Test que comprueba que la funcion fileToString(File) devuelve el valor 
 	 * esperado.
 	 */
 	@Test
