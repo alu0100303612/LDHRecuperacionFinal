@@ -32,9 +32,9 @@ public class LoadFilesTest extends TestCase {
     }
 
     /**
-     * Test que comprueba que un objeto de la clase LoadFiles se ha creado correctamente
+     * Test que comprueba que se puede acceder a un método de la clase LoadFiles
      */
-    public void testCreateObject(){
-        assertNotNull("El objeto se creo correctamente", LoadFiles.load());
+    public void testAccessLoadFiles(){
+        assertNotNull("Se puede acceder correctamente", LoadFiles.load());
     }
 }

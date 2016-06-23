@@ -6,5 +6,4 @@ script:
    - jdk_switcher use oraclejdk8
    - mvn test
    - doxygen Doxyfile
-   - mvn install -DskipTests=false -Dmaven.javadoc.skip=false -B -V
 jdk: oraclejdk8
