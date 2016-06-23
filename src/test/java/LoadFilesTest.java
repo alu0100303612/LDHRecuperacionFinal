@@ -23,6 +23,7 @@ public class LoadFilesTest extends TestCase {
 		filesNameExpected[3] = "file4.txt";
 		//Array con los nombres obtenidos con la funcion load()
 		String[] filesName = LoadFiles.load();
+		System.out.println(filesName[0] + " " + filesName[1] + " " + filesName[2] + " " + filesName[3]);
 		Assert.assertArrayEquals(filesNameExpected, filesName);	
 	}
 
@@ -30,6 +31,6 @@ public class LoadFilesTest extends TestCase {
 	 * Test que comprueba que un objeto de la clase LoadFiles se ha creado correctamente
 	 */
 	public void testCreateObject(){
-		assertNotNull("El objeto se creó correctamente", new LoadFiles());
+		assertNotNull("El objeto se creo correctamente", new LoadFiles());
 	}	
 }
