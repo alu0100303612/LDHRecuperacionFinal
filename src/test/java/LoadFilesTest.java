@@ -1,5 +1,7 @@
 
 
+import java.util.Arrays;
+
 import org.junit.Assert;
 
 import junit.framework.TestCase;
@@ -23,6 +25,7 @@ public class LoadFilesTest extends TestCase {
 		filesNameExpected[3] = "file4.txt";
 		//Array con los nombres obtenidos con la funcion load()
 		String[] filesName = LoadFiles.load();
+		Arrays.sort(filesName);
 		System.out.println(filesName[0] + " " + filesName[1] + " " + filesName[2] + " " + filesName[3]);
 		Assert.assertArrayEquals(filesNameExpected, filesName);	
 	}
