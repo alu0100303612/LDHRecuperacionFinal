@@ -14,13 +14,16 @@ public class Frame extends JFrame{
     private static final long serialVersionUID = 1L;
 
     /**
-     * Constructor de la clase. Establece las caracteristicas de la ventana.
-     * @param panel Panel que recoge el contenido de la ventana
-     * @param title Titulo que se mostrara en la ventana
+     * Constructor vacío de la clase
      */
     public Frame(){
     }
 
+    /**
+     * Establece las caracteristicas de la ventana.
+     * @param panel Panel que recoge el contenido de la ventana
+     * @param title Titulo que se mostrara en la ventana
+     */
     public void setFrame(JPanel panel, String title){
         setTitle (title);
         setSize(320, 290);

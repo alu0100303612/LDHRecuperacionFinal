@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['check',['check',['../class_check_empty.html#a75322ea66b1c45d81b87f6713a05f655',1,'CheckEmpty']]],
-  ['checkempty',['CheckEmpty',['../class_check_empty.html',1,'']]]
+  ['check',['check',['../classapp_1_1_check_empty.html#a600861b8acadceed5fb1f60cb4714b1b',1,'app::CheckEmpty']]],
+  ['checkempty',['CheckEmpty',['../classapp_1_1_check_empty.html',1,'app']]]
 ];

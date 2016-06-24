@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['add',['add',['../class_file_controller.html#a5d06e0c7f8e8852e433c33e0373d6c88',1,'FileController']]],
-  ['addtext',['addText',['../class_file_controller.html#a3167885ae6244993fdbda67468373b25',1,'FileController']]],
-  ['app',['App',['../class_app.html',1,'']]]
+  ['add',['add',['../classapp_1_1_file_controller.html#aca2518c12f608f702adc76d08221843d',1,'app::FileController']]],
+  ['addtext',['addText',['../classapp_1_1_file_controller.html#abb2dcc461e58753e9443e06e521d6d99',1,'app::FileController']]],
+  ['app',['App',['../classapp_1_1_app.html',1,'app']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deletefile',['deleteFile',['../class_file_controller.html#a2a4ed569f4eca8bb41791aa661d1e6a5',1,'FileController']]]
+  ['deletefile',['deleteFile',['../classapp_1_1_file_controller.html#af994ae6c0fc7feb6b2ab2c87abfddba8',1,'app::FileController']]]
 ];
