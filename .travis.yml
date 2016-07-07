@@ -3,9 +3,7 @@ sudo: required
 install:
    - sudo apt-get install --yes doxygen graphviz
 script: 
-   - mvn clean install
    - mvn test
    - doxygen Doxyfile
    - mvn javadoc:javadoc
-   - mvn sonar:sonar
 jdk: oraclejdk8
