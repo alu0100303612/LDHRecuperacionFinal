@@ -40,7 +40,7 @@ public class Panel extends JPanel implements Serializable{
     File output = new File("files/output.txt");//Fichero de salida
 
     /**
-     * Constructor de la clase. Establece las características del Panel
+     * Constructor de la clase. Establece las caracteristicas del Panel
      */
     public Panel(){
         setLayout(null);

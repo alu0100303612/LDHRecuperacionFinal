@@ -14,7 +14,7 @@ public class Frame extends JFrame{
     private static final long serialVersionUID = 1L;
 
     /**
-     * Constructor vacío de la clase
+     * Constructor vacio de la clase
      */
     public Frame(){
     }
